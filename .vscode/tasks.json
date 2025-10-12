@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build pascal_pyramid",
+      "type": "shell",
+      "command": "mkdir -p build && clang -g -O0 -std=c11 pascal_pyramid.c -o build/pascal_pyramid",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}

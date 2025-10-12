@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C Launch (pascal_pyramid)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/pascal_pyramid", // ⬅ adjust if you output elsewhere
+      "args": [
+        5
+      ],
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "MIMode": "lldb",
+      "externalConsole": false,
+      "stopAtEntry": false,
+      "logging": {
+        "exceptions": true,
+        "programOutput": true
+      },
+      "preLaunchTask": "build pascal_pyramid" // ⬅ pairs with tasks.json below
+    },
+    {
+      "name": "C Attach (pick running process)",
+      "type": "cppdbg",
+      "request": "attach",
+      "processId": "${command:pickProcess}",
+      "program": "${workspaceFolder}/build/pascal_pyramid",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "lldb",
+      "externalConsole": false
+    }
+  ]
+}
