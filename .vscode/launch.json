@@ -2,12 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug Pascal Pyramid (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/pascal_pyramid",
+      "args": [
+        "5"
+      ],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build C program",
+      "stopOnEntry": false,
+      "console": "integratedTerminal"
+    },
+    {
       "name": "C Launch (pascal_pyramid)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/pascal_pyramid", // ⬅ adjust if you output elsewhere
+      "program": "${workspaceFolder}/build/pascal_pyramid",
       "args": [
-        5
+        "5"
       ],
       "cwd": "${workspaceFolder}",
       "environment": [],
@@ -18,7 +31,7 @@
         "exceptions": true,
         "programOutput": true
       },
-      "preLaunchTask": "build pascal_pyramid" // ⬅ pairs with tasks.json below
+      "preLaunchTask": "Build C program"
     },
     {
       "name": "C Attach (pick running process)",
@@ -26,9 +39,7 @@
       "request": "attach",
       "processId": "${command:pickProcess}",
       "program": "${workspaceFolder}/build/pascal_pyramid",
-      "cwd": "${workspaceFolder}",
-      "MIMode": "lldb",
-      "externalConsole": false
+      "MIMode": "lldb"
     }
   ]
 }

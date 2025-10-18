@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true,
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.clang_format_style": "{ IndentWidth: 4, TabWidth: 4, UseTab: Never, BreakBeforeBraces: Allman }"
+}

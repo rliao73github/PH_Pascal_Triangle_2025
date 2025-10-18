@@ -17,4 +17,4 @@ RUN gcc -std=c11 -O2 pascal_pyramid.c -o pascal_pyramid
 ENTRYPOINT ["./pascal_pyramid"]
 
 # Default argument (can be overridden)
-CMD ["5"]
+CMD ["15"]

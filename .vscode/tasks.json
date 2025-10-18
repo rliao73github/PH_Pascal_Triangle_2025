@@ -2,14 +2,58 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Build C program",
+      "type": "shell",
+      "command": "clang",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "PH_Pascal_Triangle_2025/pascal_pyramid.c",
+        "-o",
+        "build/pascal_pyramid"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "options": {
+        "shell": {
+          "executable": "/bin/zsh"
+        }
+      },
+      "dependsOrder": "sequence"
+    },
+    {
+      "label": "Run C program",
+      "type": "shell",
+      "command": "./build/pascal_pyramid",
+      "args": [
+        "5"
+      ],
+      "dependsOn": "Build C program",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "build pascal_pyramid",
       "type": "shell",
       "command": "mkdir -p build && clang -g -O0 -std=c11 PH_Pascal_Triangle_2025/pascal_pyramid.c -o build/pascal_pyramid",
       "group": {
         "kind": "build",
-        "isDefault": true
+        "isDefault": false
       },
-      "problemMatcher": ["$gcc"]
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }
