@@ -18,6 +18,22 @@
             }
         },
         {
+            "label": "Build C program (strict)",
+            "type": "shell",
+            "command": "/bin/sh",
+            "args": [
+                "-c",
+                "mkdir -p build && /usr/bin/clang -std=c17 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -fsanitize=address,undefined -fno-omit-frame-pointer -g PH_Pascal_Triangle_2025/pascal_pyramid.c -o build/pascal_pyramid"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
             "label": "Run C program",
             "type": "shell",
             "command": "./build/pascal_pyramid",

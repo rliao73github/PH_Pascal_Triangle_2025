@@ -2,13 +2,32 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Pascal (CodeLLDB)",
+            "name": "Debug Pascal (5 rows)",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/pascal_pyramid",
-            "args": [],
+            "args": [
+                "5"
+            ],
+            "env": {
+                "APP_MODE": "demo"
+            },
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "Build C program",
+            "console": "integratedTerminal",
+            "stopOnEntry": false
+        },
+        {
+            "name": "Debug Pascal (10 rows)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/pascal_pyramid",
+            "args": [
+                "10"
+            ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build C program (strict)",
+            "console": "integratedTerminal",
             "stopOnEntry": false
         }
     ]
