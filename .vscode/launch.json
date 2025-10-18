@@ -1,45 +1,15 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Debug Pascal Pyramid (CodeLLDB)",
-      "type": "lldb",
-      "request": "launch",
-      "program": "${workspaceFolder}/build/pascal_pyramid",
-      "args": [
-        "5"
-      ],
-      "cwd": "${workspaceFolder}",
-      "preLaunchTask": "Build C program",
-      "stopOnEntry": false,
-      "console": "integratedTerminal"
-    },
-    {
-      "name": "C Launch (pascal_pyramid)",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${workspaceFolder}/build/pascal_pyramid",
-      "args": [
-        "5"
-      ],
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "MIMode": "lldb",
-      "externalConsole": false,
-      "stopAtEntry": false,
-      "logging": {
-        "exceptions": true,
-        "programOutput": true
-      },
-      "preLaunchTask": "Build C program"
-    },
-    {
-      "name": "C Attach (pick running process)",
-      "type": "cppdbg",
-      "request": "attach",
-      "processId": "${command:pickProcess}",
-      "program": "${workspaceFolder}/build/pascal_pyramid",
-      "MIMode": "lldb"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Pascal (CodeLLDB)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/pascal_pyramid",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build C program",
+            "stopOnEntry": false
+        }
+    ]
 }
